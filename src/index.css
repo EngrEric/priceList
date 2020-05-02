@@ -31,7 +31,10 @@ code {
   align-self: center;
   width: 400px;
   height: 400px;
-  background-color: rgb(229, 226, 226);
+  -webkit-box-shadow: 1px 3px 5px 3px #ccc;
+  -moz-box-shadow: 1px 3px 5px 3px #ccc;
+  box-shadow: 1px 3px 5px 3px #ccc;
+  background-color: rgb(88, 76, 76);
 }
 @media screen and (max-width: 760px) {
   .main {
@@ -49,4 +52,5 @@ button {
 p,
 h2 {
   margin: 0 auto;
+  color: #fff;
 }
