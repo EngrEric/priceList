@@ -1,21 +1,40 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import * as serviceWorker from "./serviceWorker";
 import "./index.css";
 
 const PriceList = () => {
+  /**
+   * @function submits the value from the inpu
+   * @param {*} e
+   */
   const handleSubmit = async (e) => {
     const price = e.target.value;
-    // fetch("/send-price-api", {
-    //   body: JSON.stringify(price),
-    //   mode: "post",
-    //   headers: {
-    //     "Content-Type": "application/json"
-    //   },
-    // })
+
+    // try {
+    //   //ANY API TO SEND THE DATA
+    //   // OR DISPATCH AN ACTION TO SEND THE DATA
+    //   const response = await fetch(
+    //     "/mock-api",
+    //     {
+    //       body: JSON.stringify(price),
+    //       mode: "POST",
+    //       headers: {
+    //         "Content-Type": "application/json",
+    //       },
+    //     }
+    //   );
+    //   const sucessData = await response.json();
+    //   //  Do any thing with the data returned
+    //   console.log(sucessData);
+    // } catch (error) {
+    //   console.log(error);
+    //   // do anything with the error
+    // }
+
     setTimeout(() => {
       alert("Successful");
-    }, 1000);
+    }, 2000);
   };
 
   return (
