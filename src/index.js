@@ -15,7 +15,7 @@ const PriceList = () => {
     // })
     setTimeout(() => {
       alert("Successful");
-    }, 500);
+    }, 1000);
   };
 
   return (
