@@ -1,16 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import * as serviceWorker from "./serviceWorker";
 import "./index.css";
 
 const PriceList = () => {
   /**
-   * @function submits the value from the inpu
+   * @function submits the value from the input
    * @param {*} e
    */
+
   const handleSubmit = async (e) => {
     const price = e.target.value;
-
+    // THE CODE ON COMMENT SHOWS HOW TO MAKE THE REQUEST TO A GIVEN API
+    console.log(price);
     // try {
     //   //ANY API TO SEND THE DATA
     //   // OR DISPATCH AN ACTION TO SEND THE DATA
