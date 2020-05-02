@@ -1,17 +1,54 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
+import * as serviceWorker from "./serviceWorker";
+import "./index.css";
+
+const PriceList = () => {
+  const handleSubmit = async (e) => {
+    const price = e.target.value;
+    // fetch("/send-price-api", {
+    //   body: JSON.stringify(price),
+    //   mode: "post",
+    //   headers: {
+    //     "Content-Type": "application/json"
+    //   },
+    // })
+    setTimeout(() => {
+      alert("Successful");
+    }, 500);
+  };
+
+  return (
+    <div className="main">
+      <div className="card">
+        <h2>Bronze</h2>
+        <p>Price $2000</p>
+        <button type="button" value="2000" onClick={handleSubmit}>
+          Buy
+        </button>
+      </div>
+      <div className="card">
+        <h2>Silver</h2>
+        <p>Price $3000</p>
+        <button type="button" value="3000" onClick={handleSubmit}>
+          Buy
+        </button>
+      </div>
+      <div className="card">
+        <h2>Gold</h2>
+        <p> Price $4000</p>
+        <button type="button" value="4000" onClick={handleSubmit}>
+          Buy
+        </button>
+      </div>
+    </div>
+  );
+};
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <PriceList />,
+
+  document.getElementById("root")
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
